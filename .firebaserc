@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jorden-portfolio": {
+      "hosting": {
+        "jorden-portfolio": [
+          "jorden-portfolio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jorden-portfolio"
+  }
+}
