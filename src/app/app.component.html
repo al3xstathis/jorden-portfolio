@@ -1,0 +1,107 @@
+
+<div class="animate__animated animate__fadeInDown">
+    <div class="navbar">
+        <div class="title" routerLink="/home">
+          <a>J<span style="color: #7F7F7F">orden</span>  S<span style="color: #7F7F7F">avoury</span></a>
+        </div>
+
+        <div class="about">
+          <a routerLink="/about" class="nav-link">
+            <span class="link-text">ABOUT</span>
+          </a>
+        </div>
+
+        <div class="home">
+          <a routerLink="/home" class="nav-link">
+            <span class="link-text">HOME</span>
+          </a>
+        </div>
+
+        <div class="info">
+          <a routerLink="/info" class="nav-link">
+            <span class="link-text">INFO</span>
+          </a>
+        </div>
+
+        <div class="portfolio">
+          <a routerLink="/portfolio" class="nav-link">
+            <span class="link-text">PORTFOLIO</span>
+          </a>
+        </div>
+
+        <div class="contact">
+          <a routerLink="contact" class="nav-link">
+            <span class="link-text">CONTACT</span>
+          </a>
+        </div>
+
+        <div class="instagram">
+          <a href="https://www.instagram.com/jorden_savoury/" target="_blank" class="nav-link">
+            <ion-icon color="dark" name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+
+        <div class="facebook">
+          <a href="https://www.facebook.com/savouryjorden" target="_blank" class="nav-link">
+            <ion-icon color="dark" name="logo-facebook"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <!--mobile nav bar-->
+      <div class="mobile-nav animate__animated animate__fadeIn animate__delay-1s">
+          <div class="menu">
+            <button class="menu-button" (click)="menu = !menu">
+              <ion-icon size="large" name="menu-sharp"></ion-icon>
+            </button>
+          </div>
+
+          <div class="title">
+            <a routerLink="/home" style="text-decoration: none; color: black">
+              <h2>
+                JS.
+              </h2>
+            </a>
+          </div>
+
+          <div class="instagram">
+            <a href="https://www.instagram.com/jorden_savoury/" target="_blank" class="nav-link">
+              <ion-icon color="dark" size="large" name="logo-instagram"></ion-icon>
+            </a>
+          </div>
+      </div>
+
+    <!--dropdown menu-->
+    <div [class.dropdown-open]="menu" [class.dropdown-closed]="!menu">
+        <div class="about-mobile">
+          <a routerLink="/about" class="menu-list-items" (click)="menu = !menu">
+            ABOUT
+          </a>
+        </div>
+        <div class="home-mobile">
+          <a routerLink="/home" class="menu-list-items" (click)="menu = !menu">
+            HOME
+          </a>
+        </div>
+        <div class="info-mobile">
+          <a routerLink="/info" class="menu-list-items" (click)="menu = !menu">
+            INFO
+          </a>
+        </div>
+        <div class="portfolio-mobile">
+          <a routerLink="/portfolio" class="menu-list-items" (click)="menu = !menu">
+            PORTFOLIO
+          </a>
+        </div>
+        <div class="contact-mobile">
+          <a routerLink="/contact" class="menu-list-items" (click)="menu = !menu">
+            CONTACT
+          </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<router-outlet></router-outlet>
