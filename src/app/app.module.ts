@@ -10,10 +10,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
-import {AngularFireStorageModule} from "@angular/fire/storage";
+import {AngularFireStorageModule, BUCKET} from '@angular/fire/storage';
 import {AngularFireAuthModule} from "@angular/fire/auth";
 import {AngularSvgIconModule} from "angular-svg-icon";
 import { InfoComponent } from './info/info.component';
+import { LifestyleComponent } from './lifestyle/lifestyle.component';
+import { SportsComponent } from './sports/sports.component';
+import { PortraitComponent } from './portrait/portrait.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { InfoComponent } from './info/info.component';
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
-    InfoComponent
+    InfoComponent,
+    LifestyleComponent,
+    SportsComponent,
+    PortraitComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ import { InfoComponent } from './info/info.component';
     AngularFireAuthModule,
     AngularSvgIconModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: BUCKET, useValue: 'gs://jorden-portfolio.appspot.com'
+  }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

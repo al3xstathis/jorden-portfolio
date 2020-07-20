@@ -11,7 +11,7 @@
 }
 body {
   color: black;
-  background-color: #FFFFFF;
+  background-color: #000000;
   overflow-y: hidden;
 }
 
@@ -97,7 +97,6 @@ body {
 
 .dropdown-closed {
   overflow-y: hidden;
-  /*display: none;*/
   text-decoration: none;
   list-style: none;
   text-align: center;
@@ -131,7 +130,15 @@ body {
 
 /*tablet*/
 @media screen and (min-width: 620px) {
-
+  .title {
+    font-size: xx-large;
+    margin-left: 3rem;
+    letter-spacing: 0.2em;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 2;
+    color: black;
+  }
 }
 
 /*laptop*/
@@ -147,7 +154,7 @@ body {
 
   .title {
     font-size: xx-large;
-    margin-left: 5rem;
+    margin-left: 3rem;
     letter-spacing: 0.2em;
     -webkit-box-flex: 3;
     -ms-flex-positive: 3;
@@ -156,6 +163,7 @@ body {
   }
 
   .navbar {
+    flex-wrap: nowrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -170,22 +178,19 @@ body {
     justify-content: flex-start;
   }
 
-  /*.instagram {*/
-  /*  margin-right: 5rem;*/
-  /*}*/
+
 
   .facebook {
-    margin-right: 5rem;
+    padding-right: 20px;
   }
 
-  .about, .home, .info, .portfolio, .contact, .instagram, .facebook {
-    padding-top: 20px;
+  .about, .home, .info, .portfolio, .contact, .instagram, .facebook, .title {
+    /*padding-top: 20px;*/
   }
 
   .navbar {
     height: 100px;
     width: 100vw;
-    /*position: fixed;*/
   }
 
   body {
