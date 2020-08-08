@@ -36,7 +36,7 @@ const routes: Routes = [
     component: InfoComponent
   },
   {
-    path: 'sport',
+    path: 'sports',
     component: SportsComponent
   },
   {

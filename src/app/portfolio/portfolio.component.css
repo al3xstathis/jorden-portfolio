@@ -55,7 +55,6 @@ img {
   -o-transition: filter 0.3s ease-in;
   transition: filter 0.3s ease-in;
   transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
-
 }
 
 .column-title {
@@ -88,6 +87,186 @@ img {
 }
 
 
-.column-title:hover {
+.column-title {
   opacity: 1;
 }
+
+@media screen and (min-width: 620px){
+
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*height: 80vh;*/
+  }
+  .column {
+    width: 300px;
+    height: 450px;
+    padding: 30px;
+    position: relative;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 150px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 60px;
+    letter-spacing: 0.12em;
+  }
+
+  .column:hover img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transition: -webkit-filter 0.3s ease-in;
+    transition: -webkit-filter 0.3s ease-in;
+    -o-transition: filter 0.3s ease-in;
+    transition: filter 0.3s ease-in;
+    transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
+  }
+
+  .column-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    /* position the text in t’ middle*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+
+  .column-title {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 960px){
+
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*height: 80vh;*/
+  }
+  .column {
+    width: 300px;
+    height: 450px;
+    padding: 30px;
+    position: relative;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 150px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 60px;
+    letter-spacing: 0.12em;
+  }
+
+  .column:hover img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transition: -webkit-filter 0.3s ease-in;
+    transition: -webkit-filter 0.3s ease-in;
+    -o-transition: filter 0.3s ease-in;
+    transition: filter 0.3s ease-in;
+    transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
+  }
+
+  .column-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    /* position the text in t’ middle*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+
+  .column-title:hover {
+    opacity: 1;
+  }
+}
+
+
