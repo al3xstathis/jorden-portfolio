@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-portrait',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortraitComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private analytics: AngularFireAnalytics) {
+    analytics.setCurrentScreen('Portait Screen');
+    analytics.logEvent('Viewed Portfolio Screen',{});
+  }
   ngOnInit(): void {
   }
 

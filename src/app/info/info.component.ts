@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-info',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private analytics: AngularFireAnalytics) {
+    analytics.setCurrentScreen('Info Screen');
+    analytics.logEvent('Viewed Info Screen',{});
+  }
   ngOnInit(): void {
   }
 

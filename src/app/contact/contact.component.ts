@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private analytics: AngularFireAnalytics) {
+    analytics.setCurrentScreen('Contact Screen');
+    analytics.logEvent('Viewed Contact Screen',{});
+  }
+
+  sendAnalytics() {
+    this.analytics.logEvent('Sent Email', {})
+  }
 
   ngOnInit(): void {
   }

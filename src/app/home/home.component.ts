@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private analytics: AngularFireAnalytics) {
+    analytics.setCurrentScreen('Home Screen');
+    analytics.logEvent('Viewed Home Screen',{});
+  }
   ngOnInit(): void {
   }
 

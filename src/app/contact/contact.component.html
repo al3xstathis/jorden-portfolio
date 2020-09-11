@@ -21,26 +21,26 @@
     </ul>
   </div>
 
-  <form class="input-area animate__animated animate__fadeInUp animate__delay-2s">
+  <form class="input-area animate__animated animate__fadeInUp animate__delay-2s" action="https://formspree.io/xknqejyq" method="POST">
     <p class="name">
       <label>
-        <input placeholder="Name:*">
+        <input type="text" placeholder="Name:*">
       </label>
     </p>
 
     <p class="email">
       <label>
-        <input type="email" placeholder="Email:*">
+        <input type="email" name="_replyto" placeholder="Email:*">
       </label>
     </p>
 
     <p class="message">
       <label>
-        <textarea placeholder="Type your message:" cols="65"></textarea>
+        <textarea name="message" placeholder="Type your message:" cols="65"></textarea>
       </label>
     </p>
     <p class="button">
-      <button>Submit</button>
+      <button type="submit" (click)="sendAnalytics()">Submit</button>
     </p>
   </form>
 

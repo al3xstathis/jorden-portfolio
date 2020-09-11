@@ -17,6 +17,9 @@ import { InfoComponent } from './info/info.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { SportsComponent } from './sports/sports.component';
 import { PortraitComponent } from './portrait/portrait.component';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { FooterComponent } from './footer/footer.component';
+import {AngularFireAnalyticsModule, ScreenTrackingService} from '@angular/fire/analytics';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { PortraitComponent } from './portrait/portrait.component';
     InfoComponent,
     LifestyleComponent,
     SportsComponent,
-    PortraitComponent
+    PortraitComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,10 +41,13 @@ import { PortraitComponent } from './portrait/portrait.component';
     AngularFireModule.initializeApp(environment),
     AngularFireStorageModule,
     AngularFireAuthModule,
-    AngularSvgIconModule.forRoot()
+    AngularFireAnalyticsModule,
+    AngularSvgIconModule.forRoot(),
+    NgxScrollTopModule
   ],
-  providers: [{
-    provide: BUCKET, useValue: 'gs://jorden-portfolio.appspot.com'
+  providers: [
+    ScreenTrackingService,
+    {provide: BUCKET, useValue: 'gs://jorden-portfolio.appspot.com'
   }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-sports',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SportsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private analytics: AngularFireAnalytics) {
+    analytics.setCurrentScreen('Sports Screen');
+    analytics.logEvent('Viewed Sports Screen',{});
+  }
   ngOnInit(): void {
   }
 

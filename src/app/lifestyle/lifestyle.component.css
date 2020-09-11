@@ -3,6 +3,33 @@
   flex-wrap: wrap;
   padding: 0 4px;
 }
+.header h1{
+  font-style: italic;
+  font-size: 60px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+a {
+  color: black;
+}
+p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.credits {
+  padding-top: 20px;
+}
+.photo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.grapher {
+  font-size: initial;
+  font-weight: initial;
+}
 
 
 /* Create three equal columns that sits next to each other */
