@@ -20,7 +20,7 @@ import { PortraitComponent } from './portrait/portrait.component';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { FooterComponent } from './footer/footer.component';
 import {AngularFireAnalyticsModule, ScreenTrackingService} from '@angular/fire/analytics';
-
+import {LazyLoadImageModule} from 'ng-lazyload-image';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,7 @@ import {AngularFireAnalyticsModule, ScreenTrackingService} from '@angular/fire/a
     LifestyleComponent,
     SportsComponent,
     PortraitComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ import {AngularFireAnalyticsModule, ScreenTrackingService} from '@angular/fire/a
     AngularFireAuthModule,
     AngularFireAnalyticsModule,
     AngularSvgIconModule.forRoot(),
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    LazyLoadImageModule
   ],
   providers: [
     ScreenTrackingService,

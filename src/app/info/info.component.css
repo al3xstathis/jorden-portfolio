@@ -1,5 +1,6 @@
 .info {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 35px;
   letter-spacing: 0.2em;
   grid-column: 3/6;

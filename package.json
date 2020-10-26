@@ -28,6 +28,7 @@
     "component": "^1.1.0",
     "firebase": "^7.14.6",
     "ionicons": "^5.0.1",
+    "ng-lazyload-image": "^9.0.1",
     "ngx-scrolltop": "^2.0.0",
     "nodemailer": "^6.4.11",
     "rxjs": "~6.5.4",
